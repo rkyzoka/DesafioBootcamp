@@ -1,0 +1,29 @@
+﻿@page
+@model DesafioBootcamp.Pages.Products.IndexModel
+@{
+}
+
+<br />
+<h2>Products</h2>
+<a class="btn btn-primary btn-sm" href="/Products/Create">New Product</a>
+<a class="btn btn-secondary btn-sm" href="/Products/Edit">Edit</a>
+<a class="btn btn-danger btn-sm" href="/Products/Delete">Delete</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.listProducts)
+        {
+            <tr>
+                <td>@product.id</td>
+                <td>@product.name</td>
+            </tr>
+        }
+    </tbody>
+</table>
